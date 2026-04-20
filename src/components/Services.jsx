@@ -10,8 +10,8 @@ function Services() {
             <h2 className="services-heading">What do I offer?</h2>
             
             <div className="service-container">
-                {services.map(service => (
-                    <Service key={service.id} service={service}/>
+                {services.map((service, i) => (
+                    <Service key={service.id} service={service} index={i}/>
                 ))}
             </div>
         </section>

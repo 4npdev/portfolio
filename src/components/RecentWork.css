@@ -42,14 +42,6 @@
     transition: transform 0.2s ease;
 }
 
-.recent-work-project-card:hover {
-    transform: scale(1.1);
-}
-
-.recent-work-project-card:nth-child(2) {
-    margin-top: 5rem;
-}
-
 .recent-work-btn-main {
     background-color: var(--white);
     width: 10em;
@@ -60,18 +52,19 @@
     transition: background-color 0.2s ease;
 }
 
-.recent-work-btn-main:hover {
-    background-color: var(--cyan-2);
-}
-
 @media (width < 1000px) {
     .recent-work-card-container {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
+}
 
-    .recent-work-card-container:nth-child(2) {
-        margin-top: 0;
+@media (width > 600px) {
+    .recent-work-btn-main:hover {
+        background-color: var(--cyan-2);
+    }
+    .recent-work-project-card:hover {
+        transform: scale(1.1);
     }
 }

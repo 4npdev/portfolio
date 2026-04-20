@@ -4,6 +4,8 @@ import About from "../components/About"
 import Skills from "../components/Skills"
 import RecentWork from "../components/RecentWork"
 import Services from "../components/Services"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 function Home() {
     return (
@@ -14,6 +16,8 @@ function Home() {
             <Skills />
             <RecentWork />
             <Services />
+            <Contact />
+            <Footer />
         </>
     )
 }

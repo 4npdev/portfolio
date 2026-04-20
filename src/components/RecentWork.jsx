@@ -1,6 +1,7 @@
 import projects from "../data/projects"
 import ProjectCard from "./ProjectCard"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 //Assets
 import "./RecentWork.css"
@@ -10,11 +11,17 @@ function RecentWork() {
 
     return (
         <section className="recent-work">
-            <h2 className="recent-work-heading">Recent Work</h2>
-            
+            <motion.div
+                initial={{ transform: "translateY(100px)", opacity: 0 }}
+                whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut"}}>
+                       
+                <h2 className="recent-work-heading">Recent Work</h2>
+            </motion.div>
+             
             <div className="recent-work-card-container">
-                {featured.map(project => (
-                    <ProjectCard key={project.id} project={project} />
+                {projects.map((project, i) => (
+                    <ProjectCard key={project.id} project={project} index={i} />
                 ))}
             </div>
 

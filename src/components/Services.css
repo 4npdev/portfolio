@@ -5,6 +5,7 @@
     align-items: center;
     background: url(../assets/service_bg.png) center no-repeat;
     padding-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 .service-container {
@@ -29,11 +30,7 @@
     min-width: 300px;
 }
 
-.service:hover {
-    background: var(--cyan-3);
-}
-
-.service-heading {
+.services-heading {
     font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -55,6 +52,12 @@
     transition: background-color 0.2s ease;
 }
 
-.service-btn-main:hover {
-    background-color: var(--cyan-2);
+@media(width > 600px) {
+    .service-btn-main:hover {
+        background-color: var(--cyan-2);
+    }
+
+    .service:hover {
+        background: var(--cyan-3);
+    }
 }

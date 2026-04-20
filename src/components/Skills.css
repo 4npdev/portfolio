@@ -35,7 +35,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.skill-container > div {
+    flex: 1;
 }
 
 .skill-container span {
@@ -48,10 +54,13 @@
     letter-spacing: 0.3rem;
     user-select: none;
     flex: 1;
+    display: block;
 }
 
 @media(width < 600px) {
-    .skills-container {
+    .skills-container span {
         flex-direction: column;
+
     }
 }
+

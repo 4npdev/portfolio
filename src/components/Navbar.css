@@ -8,7 +8,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.479);
 }
 
 .logo {
@@ -16,6 +16,9 @@ header {
 }
 
 .desktop-ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -26,20 +29,11 @@ header {
     transition: 0.2s ease;
 }
 
-.nav-links:hover {
-    color: var(--cyan-2);
-}
-
 .contact-link {
     border: 1px solid var(--white);
     border-radius: 30px;
     padding: 1rem 2rem;
     transition: 0.2s ease;
-}
-
-.contact-link:hover {
-    background-color: var(--cyan-2);
-    color: var(--black);
 }
 
 .menu-btn {
@@ -126,5 +120,16 @@ header {
         inset: 0;
         background-color: rgba(0, 0, 0, 0.103);
         z-index: 998;
+    }
+}
+
+@media (width > 600px) {
+    .contact-link:hover {
+        background-color: var(--cyan-2);
+        color: var(--black);
+    }
+
+    .nav-links:hover {
+        color: var(--cyan-2);
     }
 }

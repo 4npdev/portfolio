@@ -19,7 +19,7 @@ function Navbar() {
                     <li><a className="nav-links" href="#services">Services</a></li>
                 </ul>
 
-                <a className="contact-link" href="#">Contact me</a>
+                <a className="contact-link" href="#contact">Contact me</a>
                 
                 <button className="menu-btn" onClick={() => setIsOpen(true)}>Menu</button>
             </header>
@@ -36,7 +36,7 @@ function Navbar() {
                     <li><a onClick={() => setIsOpen(false)} className="menu-links" href="#services">Services</a></li>
                 </ul>
 
-                <a onClick={() => setIsOpen(false)} className="menu-contact-link" href="#">Contact me</a>
+                <a onClick={() => setIsOpen(false)} className="menu-contact-link" href="#contact">Contact me</a>
             </div>
         </>
     )
