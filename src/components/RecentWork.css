@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 8rem 2rem;
+    width: 100%;
 }
 
 .recent-work-heading {
@@ -57,7 +58,17 @@
     }
 }
 
+@media (width < 600px) {
+    .recent-work-project-card {
+        max-width: 100%;
+    }
+}
+
 @media (width > 600px) {
+    .recent-work-project-card {
+        max-height: 350px;
+    }
+
     .recent-work-btn:hover {
         background-color: var(--cyan-2);
     }
