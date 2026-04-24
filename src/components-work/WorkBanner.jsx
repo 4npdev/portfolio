@@ -12,7 +12,7 @@ function WorkBanner() {
                 <h1>My work</h1>
             </div>
             <div className="work-banner-controls">
-                <Link to="/">← Back to home</Link>
+                <Link className="link" to="/">← Back to home</Link>
             </div>
         </section>
     )

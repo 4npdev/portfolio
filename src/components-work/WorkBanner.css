@@ -20,5 +20,15 @@
     padding: 2rem;
 }
 
+.work-banner-controls > .link {
+    transition: color 0.2s ease;
+}
+
 @media (width < 600px) {
+}
+
+@media (width > 600px) {
+    .work-banner-controls > .link:hover {
+        color: var(--cyan-2);
+    }  
 }

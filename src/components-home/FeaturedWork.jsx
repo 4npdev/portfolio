@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import "./FeaturedWork.css"
 import projects from "../data/projects"
 
-function RecentWork() {
+function FeaturedWork() {
 
     const featured = projects.filter(project => project.featured === true)
 
@@ -32,4 +32,4 @@ function RecentWork() {
     )
 }
 
-export default RecentWork
+export default FeaturedWork

@@ -2,7 +2,7 @@ import Navbar from "../components-home/Navbar"
 import Hero from "../components-home/Hero"
 import About from "../components-home/About"
 import Skills from "../components-home/Skills"
-import RecentWork from "../components-home/FeaturedWork"
+import FeaturedWork from "../components-home/FeaturedWork"
 import Services from "../components-home/Services"
 import Contact from "../components-home/Contact"
 import Footer from "../components-home/Footer"
@@ -19,8 +19,7 @@ function Home() {
                 <Hero />
                 <About />
                 <Skills />
-                <RecentWork />
-                <Services />
+                <FeaturedWork />
                 <Contact />
             </main>
             <Footer page="home"/>

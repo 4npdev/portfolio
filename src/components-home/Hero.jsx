@@ -35,9 +35,9 @@ function Hero() {
                 <Link className="hero-btn" to="/work">See my work</Link>
             </motion.div>
             <div className="hero-social-links">
-                <a href="https://www.instagram.com/4np.dev/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/4npweb" target="_blank"><i className="fa-brands fa-github"></i></a>
-                <a href="https://www.tiktok.com/@4np.dev?is_from_webapp=1&sender_device=pc" target="_blank"><i className="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/4np.dev/" aria-label="Visit my Instagram" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/4npweb" target="_blank" aria-label="Visit my Github"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.tiktok.com/@4np.dev?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="Visit my TikTok"><i className="fa-brands fa-tiktok"></i></a>
             </div>
         </section>
     )

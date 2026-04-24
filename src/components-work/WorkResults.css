@@ -6,3 +6,13 @@
     max-width: 1300px;
     margin-inline: auto;
 }
+
+@media (width < 800px) {
+    .work-results {
+        padding: 2rem;
+    }
+
+    .project-card {
+        margin-inline: auto;
+    }
+}

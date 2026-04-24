@@ -1,28 +1,35 @@
 footer {
     padding: 4rem 5rem 2rem;
     border-top: 1px solid var(--cyan-3);
+    display: grid;
+    grid-template-areas: 
+    "left right"
+    "bottom bottom";
+    gap: 3rem;
+    height: 25rem;
+}
+
+.footer-left {
+    grid-area: left;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
+    height: 100%;
 }
 
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer-top h2 {
+.footer-left h2 {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
+}
+
+.footer-right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
 }
 
 .email-text {
@@ -37,16 +44,8 @@ footer ul {
     gap: 1rem;
 }
 
-.footer-right ul {
-    text-align: right;
-}
-
-.footer-main ul a {
-    color: var(--muted);
-    transition: color 0.2s ease;
-}
-
 .footer-bottom {
+    grid-area: bottom;
     text-align: center;
     color: var(--muted);
     font-size: 0.8rem;
@@ -56,26 +55,22 @@ footer ul {
 @media (width < 600px) {
     footer {
         padding: 3rem 2rem 2rem;
+        grid-template-areas: 
+        "left left"
+        "right right"
+        "bottom bottom";
     }
 
-    .footer-top {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        gap: 2rem;
+    .footer-left {
         align-items: center;
     }
 
-    .footer-main ul {
+    .footer-left ul {
         text-align: center;
     }
 
-    .footer-right ul {
-        text-align: center;
+    .footer-right {
+        justify-content: center;
     }
 }
 
