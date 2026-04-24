@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-//Assets
-import logo from "../assets/4np_nobg.png"
-import "./WorkNavbar.css"
+import logo from "/4np.png";
+import "./WorkNavbar.css";
 
 function WorkNavbar() {
     return (
         <header className="work-navbar">
-            <Link to="/"><img className="logo" src={logo} alt="4NP Logo" /></Link>
+            <Link to="/">
+                <img className="logo" src={logo} alt="4NP Logo" />
+            </Link>
         </header>
-    )
+    );
 }
 
-export default WorkNavbar
+export default WorkNavbar;

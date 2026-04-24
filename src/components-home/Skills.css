@@ -12,10 +12,11 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(../assets/skills_bg.png);
-    background-position: 50% 15%;
+    background-image: url("/skills_bg.png");
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
-    filter: brightness(0.6);
+    filter: brightness(0.3);
     z-index: 0;
 }
 
@@ -40,10 +41,6 @@
     max-width: 800px;
 }
 
-.skill-container > div {
-    flex: 1;
-}
-
 .skill-container span {
     border: 1px solid var(--muted);
     border-radius: 30px;
@@ -55,10 +52,4 @@
     display: block;
 }
 
-@media(width < 600px) {
-    .skill-container span {
-        flex-direction: column;
-
-    }
-}
-
+/* removed useless media query */

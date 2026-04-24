@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //Assets
-import herobg from "../assets/hero_bg.png"
 import "./Hero.css";
 
 function Hero() {

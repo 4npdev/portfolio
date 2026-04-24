@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom"
-
-//Assets
-import "./NotFound.css"
+import { Link } from "react-router-dom";
+import "./NotFound.css";
 
 function NotFound() {
     return (
         <div className="div-404">
             <h1>404 :(</h1>
             <p>This page doesn't exist.</p>
-            <br /><br />
-            <Link to="/" className="return-to-home">Return to home?</Link>
+
+            <Link to="/" className="return-to-home">
+                Return to home
+            </Link>
         </div>
-    )
+    );
 }
 
-export default NotFound
+export default NotFound;

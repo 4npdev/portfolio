@@ -1,29 +1,29 @@
-import WorkNavbar from "../components-work/WorkNavbar"
-import WorkBanner from "../components-work/WorkBanner"
-import WorkResults from "../components-work/WorkResults"
-import Footer from "../components-home/Footer"
-import { Helmet } from "react-helmet-async"
-import { useState } from "react"
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
+import WorkNavbar from "../components-work/WorkNavbar";
+import WorkBanner from "../components-work/WorkBanner";
+import WorkResults from "../components-work/WorkResults";
+import Footer from "../components-home/Footer";
 
 function Work() {
-    const [filter, setFilter] = useState('all')
 
     return (
         <>
             <Helmet>
                 <title>4NP | Work</title>
             </Helmet>
-            
+
             <WorkNavbar />
 
             <main>
-                <WorkBanner filter={filter} setFilter={setFilter}/>
-                <WorkResults filter={filter}/>
+                <WorkBanner />
+                <WorkResults />
             </main>
 
-            <Footer page="work"/>
+            <Footer />
         </>
-    )
+    );
 }
 
-export default Work
+export default Work;

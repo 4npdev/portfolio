@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    background: url(../assets/hero_bg.png) right center / auto 100% no-repeat;
+    background: url("/hero_bg.png") right center / auto 100% no-repeat;
 }
 
 .hero-heading {
@@ -28,13 +28,15 @@
 
 .hero-btn {
     background-color: var(--white);
-    width: 10em;
+    width: fit-content;
     padding: 1rem 2rem;
     text-align: center;
     color: var(--black);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .hero-social-links {
@@ -53,9 +55,10 @@
     transition: color 0.2s ease;
 }
 
-@media(width < 600px) {
+@media (width < 600px) {
     .hero {
         height: 90vh;
+        padding-inline: 2rem;
     }
 
     .hero-heading {
@@ -67,12 +70,12 @@
     }
 }
 
-@media(width > 600px) {
+@media (width > 600px) {
     .hero-btn:hover {
         background-color: var(--cyan-2);
     }
 
     .hero-social-links i:hover {
-        color: var(--cyan-2)
+        color: var(--cyan-2);
     }
 }

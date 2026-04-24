@@ -1,17 +1,16 @@
-import Project from "./ProjectCard"
+import Project from "./ProjectCard";
 
-//Assets
-import "./WorkResults.css"
-import projects from "../data/projects"
+import "./WorkResults.css";
+import projects from "../data/projects";
 
 function WorkResults() {
     return (
         <div className="work-results">
-            {projects.map((project) =>
-                <Project key={project.id} project={project}/>
-            )}
+            {projects.map((project) => (
+                <Project key={project.id} project={project} />
+            ))}
         </div>
-    )
+    );
 }
 
-export default WorkResults
+export default WorkResults;

@@ -4,7 +4,7 @@
     align-items: center;
     gap: 3rem;
     padding: 0 2rem 5rem;
-    background: url(../assets/contact_bg.png) no-repeat center;
+    background: url("/contact_bg.png") no-repeat center;
     scroll-margin-top: 8rem;
 }
 
@@ -47,7 +47,7 @@
 .contact-form input,
 .contact-form textarea {
     background: none;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid transparent;
     border-bottom: 1px solid var(--cyan-3);
     padding: 0.875rem 1rem;
     width: 100%;
@@ -60,7 +60,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border: 1px solid var(--cyan-3);
+    border-color: var(--cyan-3);
 }
 
 .contact-form textarea {
@@ -82,8 +82,8 @@
     font-family: inherit;
 }
 
-@media(width > 600px) {
+@media (width > 600px) {
     .contact-btn:hover {
         background-color: var(--cyan-1);
     }
-} 
+}

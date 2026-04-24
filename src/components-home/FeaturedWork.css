@@ -17,19 +17,11 @@
 .recent-work-card-container {
     margin-bottom: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
     width: 100%;
     max-width: 900px;
     flex-wrap: wrap;
-    max-width: 100%;
-}
-
-.recent-work-project-card img {
-    opacity: 0.9;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
 }
 
 .recent-work-project-card {
@@ -37,6 +29,16 @@
     aspect-ratio: 16 / 9;
     overflow: hidden;
     transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 400px;
+}
+
+.recent-work-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.9;
 }
 
 .recent-work-btn {
@@ -48,19 +50,14 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 @media (width < 1000px) {
     .recent-work-card-container {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-    }
-}
-
-@media (width < 600px) {
-    .recent-work-project-card {
-        max-width: 100%;
     }
 }
 
@@ -72,7 +69,8 @@
     .recent-work-btn:hover {
         background-color: var(--cyan-2);
     }
+
     .recent-work-project-card:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }

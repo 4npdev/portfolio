@@ -1,72 +1,116 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-//Assets
-import "./Contact.css"
+import "./Contact.css";
 
 function Contact() {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    })
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
 
     function handleChange(e) {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
-        })
+            [e.target.name]: e.target.value,
+        });
     }
 
     async function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
+        setLoading(true);
 
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                access_key: 'c8853188-b3f7-409f-8e57-53c952a6c256',
-               ...formData
-            })
-        })
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    access_key: "c8853188-b3f7-409f-8e57-53c952a6c256",
+                    ...formData,
+                }),
+            });
 
-        if (response.ok) {
-            alert('Message sent!')
-            setFormData({ name: '', email: '', message: '' })
+            if (response.ok) {
+                alert("Message sent!");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                alert("Something went wrong. Try again.");
+            }
+        } catch (error) {
+            alert("Network error. Try again.");
+        } finally {
+            setLoading(false);
         }
     }
-
 
     return (
         <section className="contact" id="contact">
             <motion.div
-                initial={{ transform: "translateY(100px)", opacity: 0 }}
-                whileInView={{ transform: "translateY(0px)", opacity: 1 }}
-                transition={{ duration: 0.6, ease: "easeInOut"}}
-                viewport={{ once: true }}>
-                
-                <h2 className="contact-heading">What's next? You tell me!</h2>
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                viewport={{ once: true }}
+            >
+                <h2 className="contact-heading">
+                    What's next? You tell me!
+                </h2>
             </motion.div>
-            
+
             <form className="contact-form" onSubmit={handleSubmit}>
-                <div  className="form-group">  
-                    <label className="form-label" htmlFor="name">Your name:</label><br />
-                    <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required/>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="name">
+                        Your name:
+                    </label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
 
-                <div  className="form-group">  
-                    <label className="form-label" htmlFor="email">Your email:</label><br />
-                    <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required/>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="email">
+                        Your email:
+                    </label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
 
-                <div className="form-group">  
-                    <label className="form-label" htmlFor="message">Your message:</label><br />
-                    <textarea name="message" id="message" value={formData.message} onChange={handleChange} required/>
+                <div className="form-group">
+                    <label className="form-label" htmlFor="message">
+                        Your message:
+                    </label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-                <button className="contact-btn" type="submit">Send</button>
+
+                <button
+                    className="contact-btn"
+                    type="submit"
+                    disabled={loading}
+                >
+                    {loading ? "Sending..." : "Send"}
+                </button>
             </form>
         </section>
-    )
+    );
 }
 
-export default Contact
+export default Contact;

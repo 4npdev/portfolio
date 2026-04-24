@@ -7,14 +7,19 @@
     overflow: hidden;
     transition: transform 0.2s ease;
     justify-self: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
     transform: scale(1.05);
 }
 
-.projec-cardt img {
+.project-card img {
     opacity: 0.9;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .project-info {
@@ -33,14 +38,14 @@
 }
 
 .project-info p {
-    color:  #9C9C9C;
+    color: #9C9C9C;
     font-size: 0.8rem;
 }
 
 @media (width < 600px) {
     .project-info {
         flex-direction: column;
-        align-items: baseline;
-        gap: 1rem
+        align-items: flex-start;
+        gap: 1rem;
     }
 }
