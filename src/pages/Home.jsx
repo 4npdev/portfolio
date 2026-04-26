@@ -13,6 +13,8 @@ function Home() {
         <>
             <Helmet>
                 <title>4NP | Front-end web developer</title>
+                <meta name="description" content="Frontend developer building clean websites for businesses and creators." />
+                <link rel="canonical" href="https://4np.dev" />
             </Helmet>
 
             <Navbar />

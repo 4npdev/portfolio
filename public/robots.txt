@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://4np.dev/sitemap.xml

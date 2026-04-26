@@ -1,6 +1,6 @@
 .hero {
     min-height: 100svh;
-    padding-inline: 3rem;
+    padding-inline: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -9,6 +9,6 @@
 
 @media (width < 800px) {
     .work-results {
-        padding: 2rem;
+        padding: 2rem 2rem 5rem;
     }
 }

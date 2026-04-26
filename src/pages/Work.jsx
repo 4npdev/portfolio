@@ -12,6 +12,8 @@ function Work() {
         <>
             <Helmet>
                 <title>4NP | Work</title>
+                <meta name="description" content="Browse my projects — landing pages, portfolios and custom websites." />
+                <link rel="canonical" href="https://4np.dev/work" />
             </Helmet>
 
             <WorkNavbar />

@@ -50,6 +50,11 @@
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     display: block;
+    flex: 1;
 }
 
-/* removed useless media query */
+@media (width < 600px) {
+    .skill-container {
+        flex-direction: column;
+    }
+}

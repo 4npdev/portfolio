@@ -1,4 +1,6 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 import projects from "../data/projects";
 import WorkNavbar from "./WorkNavbar";
@@ -15,6 +17,12 @@ function Project() {
 
     return (
         <>
+            <Helmet>
+                <title>{project.title} | 4NP</title>
+                <meta name="description" content={project.description} />
+                <link rel="canonical" href={`https://4np.dev/work/${project.id}`} />
+            </Helmet>
+            
             <WorkNavbar />
 
             <main>

@@ -114,6 +114,7 @@
 
     .menu-btn {
         display: block;
+        font: inherit;
     }
 }
 
