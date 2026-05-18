@@ -4,9 +4,11 @@ import "./WorkResults.css";
 import projects from "../data/projects";
 
 function WorkResults() {
+    const reversedProjects = [...projects].reverse();
+
     return (
         <div className="work-results">
-            {projects.map((project) => (
+            {reversedProjects.map((project) => (
                 <Project key={project.id} project={project} />
             ))}
         </div>
